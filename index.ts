@@ -35,15 +35,15 @@ class SplashLevel extends Phaser.Scene {
   }
 
   preload() {
-    const splashScreen = this.add.image(200, 200, 'splashscreen');
+    //const splashScreen = this.add.image(200, 200, 'splashscreen');
 
     const logo = this.add.image(200, 100, 'logo');
     logo.setScale(0.3);
     this.logo = logo;
 
-    const text1 = this.add.bitmapText(-300, 200, 'Oswald', 'NeoAlchemy', 32);
+    const text1 = this.add.bitmapText(-300, 200, 'Oswald', 'Get To Gaming', 32);
     this.companyLine1 = text1;
-    const text2 = this.add.bitmapText(-300, 230, 'Oswald', 'Indie Games', 32);
+    const text2 = this.add.bitmapText(-300, 230, 'Oswald', 'Games', 32);
     this.companyLine2 = text2;
 
     const loading = this.add.text(180, 300, ['Loading...'], {
@@ -72,13 +72,13 @@ class SplashLevel extends Phaser.Scene {
 
     this.tweens.add({
       targets: this.companyLine1, //your image that must spin
-      x: '140',
+      x: '120',
       ease: 'Elastic',
       duration: 500, //duration is in milliseconds
     });
     this.tweens.add({
       targets: this.companyLine2, //your image that must spin
-      x: '140',
+      x: '170',
       ease: 'Elastic',
       duration: 500, //duration is in milliseconds
     });
@@ -113,7 +113,7 @@ const config = {
   type: Phaser.AUTO,
   width: 400,
   height: 400,
-  backgroundColor: '0x000',
+  backgroundColor: '#fff',
   physics: {
     default: 'arcade',
     arcade: {
