@@ -42,13 +42,13 @@ class SplashLevel extends Phaser.Scene {
     logo.setScale(0.5);
     this.logo = logo;
 
-    const text1 = this.add.bitmapText(-20, -20, 'Shadowsintolightfontorange', 'Pumpkin', 50);
+    const text1 = this.add.bitmapText(400, 400, 'Shadowsintolightfontorange', 'Pumpkin', 45);
     this.companyLine1 = text1;
-    const text2 = this.add.bitmapText(-20, -20, 'Shadowsintolightfontorange', 'games',50);
+    const text2 = this.add.bitmapText(400, 400, 'Shadowsintolightfontorange', 'Games',45);
     this.companyLine2 = text2;
     
 
-    const loading = this.add.text(150, 300, ['Loading...not really'], {
+    const loading = this.add.text(155, 360, ['Loading...not really'], {
       fontFamily: 'Shadowsintolight',
       fontSize: '12px',
       color: 'white',
@@ -69,7 +69,7 @@ class SplashLevel extends Phaser.Scene {
       rotation: 2 * Math.PI, //rotation value must be radian
       ease: 'Bounce',
       delay: 600,
-      duration: 600, //duration is in milliseconds
+      duration: 0, //duration is in milliseconds
     });
 
     this.tweens.add({
@@ -82,7 +82,7 @@ class SplashLevel extends Phaser.Scene {
     this.tweens.add({
       targets: this.companyLine2, //your image that must spin
       x: '250',
-      y: '320',
+      y: '325',
       ease: 'Elastic',
       duration: 500, //duration is in milliseconds
     });
