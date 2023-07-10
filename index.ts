@@ -19,7 +19,7 @@ class BootLevel extends Phaser.Scene {
       textureURL: 'static/assets/font/Shadowsintolightfontorange.png',
       fontDataURL: 'static/assets/font/Shadowsintolightfontorange.xml',
     });
-    this.load.image('logo', 'static/assets/pumpkinlogo.webp');
+    this.load.image('logo', 'static/assets/pumpkinlogo.png');
     this.load.image('splashscreen', 'static/assets/splashscreen.png');
   }
 
