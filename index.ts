@@ -19,8 +19,9 @@ class BootLevel extends Phaser.Scene {
       textureURL: 'static/assets/font/Shadowsintolightfontorange.png',
       fontDataURL: 'static/assets/font/Shadowsintolightfontorange.xml',
     });
-    this.load.image('logo', 'static/assets/pumpkinlogo.png');
-    this.load.image('splashscreen', 'static/assets/splashscreen.png');
+    this.load.image('logo', 'static/assets/pumpkinlogo2.png');
+    this.load.image('splashscreen', 'static/assets/pumpkinlogo2.png');
+    
   }
 
   create() {
@@ -37,12 +38,15 @@ class SplashLevel extends Phaser.Scene {
   preload() {
     //const splashScreen = this.add.image(200, 200, 'splashscreen');
 
-    const logo = this.add.image(200, 100, 'logo');
-    logo.setScale(0.3);
+    const logo = this.add.image(200, 200, 'logo');
+    logo.setScale(0.5);
     this.logo = logo;
 
-    const text1 = this.add.bitmapText(-300, 200, 'Shadowsintolightfontorange', 'Pumpkin', 50);
+    const text1 = this.add.bitmapText(-20, -20, 'Shadowsintolightfontorange', 'Pumpkin', 50);
     this.companyLine1 = text1;
+    const text2 = this.add.bitmapText(-20, -20, 'Shadowsintolightfontorange', 'games',50);
+    this.companyLine2 = text2;
+    
 
     const loading = this.add.text(150, 300, ['Loading...not really'], {
       fontFamily: 'Shadowsintolight',
@@ -70,13 +74,15 @@ class SplashLevel extends Phaser.Scene {
 
     this.tweens.add({
       targets: this.companyLine1, //your image that must spin
-      x: '120',
+      x: '15',
+      y: '325', 
       ease: 'Elastic',
       duration: 500, //duration is in milliseconds
     });
     this.tweens.add({
       targets: this.companyLine2, //your image that must spin
-      x: '170',
+      x: '250',
+      y: '320',
       ease: 'Elastic',
       duration: 500, //duration is in milliseconds
     });
