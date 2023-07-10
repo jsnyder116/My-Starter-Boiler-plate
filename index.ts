@@ -15,9 +15,9 @@ class BootLevel extends Phaser.Scene {
     this.load.baseURL =
       'https://neoalchemy.github.io/starting-boilerplate-phaser-zcqxxx/';
     this.load.bitmapFont({
-      key: 'Oswald',
-      textureURL: 'static/assets/font/OswaldLightRed.png',
-      fontDataURL: 'static/assets/font/OswaldLightRed.xml',
+      key: 'Shadowsintolightfontorange',
+      textureURL: 'static/assets/font/Shadowsintolightfontorange.png',
+      fontDataURL: 'static/assets/font/Shadowsintolightfontorange.xml',
     });
     this.load.image('logo', 'static/assets/logo.png');
     this.load.image('splashscreen', 'static/assets/splashscreen.png');
@@ -41,13 +41,13 @@ class SplashLevel extends Phaser.Scene {
     logo.setScale(0.3);
     this.logo = logo;
 
-    const text1 = this.add.bitmapText(-300, 200, 'Oswald', 'Get To Gaming', 32);
+    const text1 = this.add.bitmapText(-300, 200, 'Shadowsintolightfontorange', 'Get To Gaming', 32);
     this.companyLine1 = text1;
-    const text2 = this.add.bitmapText(-300, 230, 'Oswald', 'Games', 32);
+    const text2 = this.add.bitmapText(-300, 230, 'Shadowsintolightfontorange', 'Games', 32);
     this.companyLine2 = text2;
 
     const loading = this.add.text(180, 300, ['Loading...'], {
-      fontFamily: 'Arial',
+      fontFamily: 'Shadowsintolight',
       fontSize: '12px',
       color: 'black',
       align: 'center',
