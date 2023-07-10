@@ -41,10 +41,8 @@ class SplashLevel extends Phaser.Scene {
     logo.setScale(0.3);
     this.logo = logo;
 
-    const text1 = this.add.bitmapText(-300, 200, 'Shadowsintolightfontorange', 'Get To Gaming', 32);
+    const text1 = this.add.bitmapText(-300, 200, 'Shadowsintolightfontorange', 'Pumpkin', 50);
     this.companyLine1 = text1;
-    const text2 = this.add.bitmapText(-300, 230, 'Shadowsintolightfontorange', 'Games', 32);
-    this.companyLine2 = text2;
 
     const loading = this.add.text(180, 300, ['Loading...'], {
       fontFamily: 'Shadowsintolight',
@@ -113,7 +111,7 @@ const config = {
   type: Phaser.AUTO,
   width: 400,
   height: 400,
-  backgroundColor: '#fff',
+  backgroundColor: '#zzz',
   physics: {
     default: 'arcade',
     arcade: {
