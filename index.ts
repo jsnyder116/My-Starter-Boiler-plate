@@ -19,7 +19,7 @@ class BootLevel extends Phaser.Scene {
       textureURL: 'static/assets/font/Shadowsintolightfontorange.png',
       fontDataURL: 'static/assets/font/Shadowsintolightfontorange.xml',
     });
-    this.load.image('logo', 'static/assets/logo.png');
+    this.load.image('logo', 'static/assets/pumpkinlogo.webp');
     this.load.image('splashscreen', 'static/assets/splashscreen.png');
   }
 
@@ -44,10 +44,10 @@ class SplashLevel extends Phaser.Scene {
     const text1 = this.add.bitmapText(-300, 200, 'Shadowsintolightfontorange', 'Pumpkin', 50);
     this.companyLine1 = text1;
 
-    const loading = this.add.text(180, 300, ['Loading...'], {
+    const loading = this.add.text(150, 300, ['Loading...not really'], {
       fontFamily: 'Shadowsintolight',
       fontSize: '12px',
-      color: 'black',
+      color: 'white',
       align: 'center',
     });
 
