@@ -15,8 +15,8 @@ class BootLevel extends Phaser.Scene {
     this.load.baseURL =
       'https://jsnyder116.github.io/My-Starter-Boiler-plate/';
     this.load.bitmapFont({
-      key: 'Shadowsintolightfontorange',
-      textureURL: 'static/assets/font/Shadowsintolightfontorange.png',
+      key: 'Shadowsintolightfontgreen',
+      textureURL: 'static/assets/font/Shadowsintolightfontgreen.png',
       fontDataURL: 'static/assets/font/Shadowsintolightfontorange.xml',
     });
     this.load.image('logo', 'static/assets/pumpkinlogo2.png');
@@ -42,9 +42,9 @@ class SplashLevel extends Phaser.Scene {
     logo.setScale(0.5);
     this.logo = logo;
 
-    const text1 = this.add.bitmapText(400, 400, 'Shadowsintolightfontorange', 'Pumpkin Programming', 45);
+    const text1 = this.add.bitmapText(400, 400, 'Shadowsintolightfontgreen', 'Pumpkin Programming', 45);
     this.companyLine1 = text1;
-    const text2 = this.add.bitmapText(400, 400, 'Shadowsintolightfontorange', '',45);
+    const text2 = this.add.bitmapText(400, 400, 'Shadowsintolightfontgreen', '',45);
     this.companyLine2 = text2;
     
 
