@@ -125,6 +125,7 @@ const config = {
     },
   },
   scene: [BootLevel, SplashLevel, MainLevel],
+
 };
 
 const game = new Phaser.Game(config);
