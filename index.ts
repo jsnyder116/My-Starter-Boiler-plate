@@ -38,21 +38,20 @@ class SplashLevel extends Phaser.Scene {
   preload() {
     //const splashScreen = this.add.image(200, 200, 'splashscreen');
 
-    const logo = this.add.image(200, 200, 'logo');
-    logo.setScale(0.5);
+    const logo = this.add.image(500, 500, 'logo');
+    logo.setScale(0.7);
     this.logo = logo;
 
-    const text1 = this.add.bitmapText(400, 400, 'Shadowsintolightfontgreen', 'Pumpkin Programming', 45);
+    const text1 = this.add.bitmapText(400, 400, 'Shadowsintolightfontgreen', 'Pumpkin Programming', 100);
     this.companyLine1 = text1;
     const text2 = this.add.bitmapText(400, 400, 'Shadowsintolightfontgreen', '',45);
     this.companyLine2 = text2;
     
 
-    const loading = this.add.text(15, 10, ['Loading...not really'], {
+    const loading = this.add.text(15, 50, ['Loading...not really'], {
       fontFamily: 'Shadowsintolight',
-      fontSize: '12px',
+      fontSize: '80px',
       color: 'white',
-      align: 'center',
     });
 
     /* START PRELOAD ITEMS */
@@ -69,19 +68,19 @@ class SplashLevel extends Phaser.Scene {
       rotation: 2 * Math.PI, //rotation value must be radian
       ease: 'Bounce',
       delay: 600,
-      duration: 0, //duration is in milliseconds
+      duration: 1000, //duration is in milliseconds
     });
 
     this.tweens.add({
       targets: this.companyLine1, //your image that must spin
-      x: '15',
-      y: '325', 
-      ease: 'Elastic',
-      duration: 500, //duration is in milliseconds
+      x: '100',
+      y: '660', 
+      ease: 'Bounce',
+      duration: 800, //duration is in milliseconds
     });
     this.tweens.add({
       targets: this.companyLine2, //your image that must spin
-      x: '250',
+      x: '650',
       y: '325',
       ease: 'Elastic',
       duration: 500, //duration is in milliseconds
@@ -115,9 +114,9 @@ class MainLevel extends Phaser.Scene {
 
 const config = {
   type: Phaser.AUTO,
-  width: 400,
-  height: 400,
-  backgroundColor: '#zzz',
+  width: 1000,
+  height: 1000,
+  backgroundColor: '#ffb64f',
   physics: {
     default: 'arcade',
     arcade: {
