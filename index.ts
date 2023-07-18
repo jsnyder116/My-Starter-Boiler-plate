@@ -12,8 +12,7 @@ class BootLevel extends Phaser.Scene {
   preload() {
     // CHANGE BASE URL!!!!
     this.add.text(20, 20, 'Boot Sequence Initiated.');
-    this.load.baseURL =
-      'https://jsnyder116.github.io/My-Starter-Boiler-plate/';
+    this.load.baseURL = 'https://jsnyder116.github.io/My-Starter-Boiler-plate/';
     this.load.bitmapFont({
       key: 'Shadowsintolightfontgreen',
       textureURL: 'static/assets/font/Shadowsintolightfontgreen.png',
@@ -21,7 +20,6 @@ class BootLevel extends Phaser.Scene {
     });
     this.load.image('logo', 'static/assets/pumpkinlogo2.png');
     this.load.image('splashscreen', 'static/assets/pumpkinlogo2.png');
-    
   }
 
   create() {
@@ -38,24 +36,37 @@ class SplashLevel extends Phaser.Scene {
   preload() {
     //const splashScreen = this.add.image(200, 200, 'splashscreen');
 
-    const logo = this.add.image(500, 500, 'logo');
+    const logo = this.add.image(500, 400, 'logo');
     logo.setScale(0.7);
     this.logo = logo;
 
-    const text1 = this.add.bitmapText(400, 400, 'Shadowsintolightfontgreen', 'Pumpkin Programming', 100);
+    const text1 = this.add.bitmapText(
+      400,
+      400,
+      'Shadowsintolightfontgreen',
+      'Pumpkin Programming',
+      80
+    );
     this.companyLine1 = text1;
-    const text2 = this.add.bitmapText(400, 400, 'Shadowsintolightfontgreen', '',45);
+    const text2 = this.add.bitmapText(
+      400,
+      400,
+      'Shadowsintolightfontgreen',
+      '',
+      45
+    );
     this.companyLine2 = text2;
-    
 
-    const loading = this.add.text(15, 50, ['Loading...not really'], {
+    const loading = this.add.text(15, 70, ['Loading...not really'], {
       fontFamily: 'Shadowsintolight',
-      fontSize: '80px',
+      fontSize: '60px',
       color: 'white',
     });
 
     /* START PRELOAD ITEMS */
-
+    this.load.baseURL =
+      'https://jsnyder116.github.io/asteroids-jas-0116102010333-4gyx8n-9ypzi5/';
+    this.load.image('ship', 'static/assets/Asteroids ship.png');
     /* END PRELOAD ITEMS */
   }
   private logo: Phaser.GameObjects.Image;
@@ -73,10 +84,10 @@ class SplashLevel extends Phaser.Scene {
 
     this.tweens.add({
       targets: this.companyLine1, //your image that must spin
-      x: '100',
-      y: '660', 
+      x: '175',
+      y: '590',
       ease: 'Bounce',
-      duration: 800, //duration is in milliseconds
+      duration: 1600, //duration is in milliseconds
     });
     this.tweens.add({
       targets: this.companyLine2, //your image that must spin
@@ -87,8 +98,8 @@ class SplashLevel extends Phaser.Scene {
     });
 
     setTimeout(() => {
-      //this.scene.start('MainLevel');
-    }, 2000);
+      this.scene.start('MainLevel');
+    }, 4000);
   }
 
   update() {}
@@ -115,7 +126,7 @@ class MainLevel extends Phaser.Scene {
 const config = {
   type: Phaser.AUTO,
   width: 1000,
-  height: 1000,
+  height: 800,
   backgroundColor: '#ffb64f',
   physics: {
     default: 'arcade',
@@ -124,7 +135,6 @@ const config = {
     },
   },
   scene: [BootLevel, SplashLevel, MainLevel],
-
 };
 
 const game = new Phaser.Game(config);
